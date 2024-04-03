@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-03T13:39:50.247837" rpa="false" schemaversion="5">
+<suite id="s1" name="000" source="C:\Users\piyao\OneDrive\Desktop\New folder\000.robot">
+<test id="s1-t1" name="Example" line="14">
+<for flavor="IN">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-03T13:39:53.500086" level="INFO">//*[@id="rso"]/div[4]/div/div/div[1]/div/div/span/a/h3</msg>
+<arg>${animal}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-03T13:39:53.500086" elapsed="0.001001"/>
+</kw>
+<kw name="Open Browser" owner="Browser">
+<msg time="2024-04-03T13:39:53.503090" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2024-04-03T13:39:53.507088" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\piyao\\OneDrive\\Desktop\\New folder\\browser\\traces\\4e495c9b-6acc-4d0c-8b39-21d154a9f169"}</msg>
+<msg time="2024-04-03T13:39:56.227749" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\piyao\\OneDrive\\Desktop\\New folder\\browser\\traces\\4e495c9b-6acc-4d0c-8b39-21d154a9f169"}</msg>
+<msg time="2024-04-03T13:39:56.228750" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2024-04-03T13:39:56.284767" level="INFO">Successfully created context. </msg>
+<msg time="2024-04-03T13:39:56.284767" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2024-04-03T13:40:04.800256" level="INFO">Successfully initialized new page object and opened url: https://google.com/</msg>
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2024-04-03T13:39:53.501087" elapsed="11.300168"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-04-03T13:40:04.804257" level="INFO">Fills the text 'intro robot framework' in the given field.</msg>
+<arg>${id}</arg>
+<arg>${Text}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-04-03T13:40:04.802257" elapsed="0.315081"/>
+</kw>
+<kw name="Keyboard Key" owner="Browser">
+<arg>press</arg>
+<arg>Enter</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Press a keyboard key on the virtual keyboard or set a key up or down.</doc>
+<status status="PASS" start="2024-04-03T13:40:05.118340" elapsed="0.042006"/>
+</kw>
+<kw name="Click" owner="Browser">
+<arg>${animal}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-04-03T13:40:05.160346" elapsed="1.691421"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-03T13:40:11.853237" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-03T13:40:06.852765" elapsed="5.000472"/>
+</kw>
+<kw name="Get Url" owner="Browser">
+<msg time="2024-04-03T13:40:11.865241" level="INFO">${value} = https://www.browserstack.com/guide/robot-framework-guide</msg>
+<var>${value}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<status status="PASS" start="2024-04-03T13:40:11.853237" elapsed="0.013002"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${value}</arg>
+<arg>${items}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-03T13:40:11.866239" elapsed="0.001002"/>
+</kw>
+<var name="${animal}">//*[@id="rso"]/div[4]/div/div/div[1]/div/div/span/a/h3</var>
+<status status="PASS" start="2024-04-03T13:39:53.497121" elapsed="18.370120"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-03T13:40:11.869245" level="INFO">//*[@id="rso"]/div[5]/div/div/div[1]/div/div/span/a/h3</msg>
+<arg>${animal}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-03T13:40:11.868244" elapsed="0.001001"/>
+</kw>
+<kw name="Open Browser" owner="Browser">
+<msg time="2024-04-03T13:40:11.871243" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2024-04-03T13:40:11.874243" level="INFO">Switching browser to browser=ccc8717a-8e05-4743-b943-7f81e9a8a45e</msg>
+<msg time="2024-04-03T13:40:11.884246" level="INFO">Successfully changed active browser: browser=ccc8717a-8e05-4743-b943-7f81e9a8a45e</msg>
+<msg time="2024-04-03T13:40:11.884246" level="INFO">Reusing existing browser with id: browser=ccc8717a-8e05-4743-b943-7f81e9a8a45e</msg>
+<msg time="2024-04-03T13:40:11.884246" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2024-04-03T13:40:11.925256" level="INFO">Successfully created context. </msg>
+<msg time="2024-04-03T13:40:11.925256" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2024-04-03T13:40:18.934610" level="INFO">Successfully initialized new page object and opened url: https://google.com/</msg>
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2024-04-03T13:40:11.869245" elapsed="7.065365"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-04-03T13:40:18.936611" level="INFO">Fills the text 'intro robot framework' in the given field.</msg>
+<arg>${id}</arg>
+<arg>${Text}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-04-03T13:40:18.935612" elapsed="0.282076"/>
+</kw>
+<kw name="Keyboard Key" owner="Browser">
+<arg>press</arg>
+<arg>Enter</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Press a keyboard key on the virtual keyboard or set a key up or down.</doc>
+<status status="PASS" start="2024-04-03T13:40:19.218683" elapsed="0.050010"/>
+</kw>
+<kw name="Click" owner="Browser">
+<arg>${animal}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-04-03T13:40:19.269695" elapsed="1.812016"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-03T13:40:26.090431" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-03T13:40:21.082708" elapsed="5.008746"/>
+</kw>
+<kw name="Get Url" owner="Browser">
+<msg time="2024-04-03T13:40:26.141442" level="INFO">${value} = https://testautomationu.applitools.com/robot-framework-tutorial/chapter1.html</msg>
+<var>${value}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<status status="PASS" start="2024-04-03T13:40:26.092431" elapsed="0.049011"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<msg time="2024-04-03T13:40:26.157447" level="FAIL">https://testautomationu.applitools.com/robot-framework-tutorial/chapter1.html != https://www.browserstack.com/guide/robot-framework-guide</msg>
+<arg>${value}</arg>
+<arg>${items}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="FAIL" start="2024-04-03T13:40:26.154450" elapsed="0.007998">https://testautomationu.applitools.com/robot-framework-tutorial/chapter1.html != https://www.browserstack.com/guide/robot-framework-guide</status>
+</kw>
+<var name="${animal}">//*[@id="rso"]/div[5]/div/div/div[1]/div/div/span/a/h3</var>
+<status status="FAIL" start="2024-04-03T13:40:11.868244" elapsed="14.301205">https://testautomationu.applitools.com/robot-framework-tutorial/chapter1.html != https://www.browserstack.com/guide/robot-framework-guide</status>
+</iter>
+<var>${animal}</var>
+<value>${id2}</value>
+<value>${id3}</value>
+<value>${id4}</value>
+<status status="FAIL" start="2024-04-03T13:39:53.496086" elapsed="32.704378">https://testautomationu.applitools.com/robot-framework-tutorial/chapter1.html != https://www.browserstack.com/guide/robot-framework-guide</status>
+</for>
+<kw name="Log" owner="BuiltIn">
+<arg>Outside loop</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2024-04-03T13:40:26.569217" elapsed="0.035009"/>
+</kw>
+<status status="FAIL" start="2024-04-03T13:39:53.484083" elapsed="33.713684">https://testautomationu.applitools.com/robot-framework-tutorial/chapter1.html != https://www.browserstack.com/guide/robot-framework-guide</status>
+</test>
+<status status="FAIL" start="2024-04-03T13:39:50.251837" elapsed="40.605543"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="000">000</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-04-03T13:39:53.503090" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2024-04-03T13:40:11.871243" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+</errors>
+</robot>
