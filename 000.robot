@@ -20,7 +20,7 @@ Example
         Click    ${animal}
         Sleep    5
         ${value}       Get Url      
-        Should Be Equal    ${value}     ${items}
+        Should Be Equal    ${value}     https://medium.com/@aifakhri/brief-intro-to-robot-framework-and-extending-robot-framework-with-python-7c8b795dca7f, https://testautomationu.applitools.com/robot-framework-tutorial/chapter1.html
     END
-    Log    Outside loop
+    Log    Outside loopgit
 
